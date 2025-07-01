@@ -1,3 +1,67 @@
 <resources>
     <string name="app_name">PCL</string>
+
+    <string name="txt_welcome">Welcome to PCL</string>
+    <string name="txt_new_tournment">New Tournament</string>
+    <string name="txt_load_tournment">Load Tournament</string>
+    <string name="txt_tournment">Tournament</string>
+    <string name="title_home">Home</string>
+    <string name="title_teams">Teams</string>
+    <string name="title_matches">Matches</string>
+    <string name="title_points">Points</string>
+    <string name="title_statistics">Statistics</string>
+    <string name="title_players">Players</string>
+    <string name="title_tournaments">Tournaments</string>
+    <string name="title_start_match">Match Details</string>
+
+    <!--Create new Tournament Activity -->
+    <string name="txt_create_tournament">Create Tournament</string>
+    <string name="txt_tournament_name">Tournament Name *</string>
+    <string name="txt_location">Location</string>
+    <string name="txt_start_date">Start Date</string>
+    <string name="txt_end_date">End Date</string>
+    <string name="txt_add_new">Add Ne</string>
+
+    <!-- Home Page Text -->
+    <string name="txt_no_tournament">No Tournament</string>
+    <string name="txt_no_team">No Team</string>
+    <string name="txt_no_team_discripion">Add a team by clicking below button.</string>
+    <string name="txt_no_tournament_discripion">Add a tournament by clicking below button.</string>
+    <string name="txt_create_team">Create a Team</string>
+    <string name="txt_start_match">Schedule Match</string>
+    <string name="txt_add_team_discription">Add teams to the tournament to start match</string>
+    <string name="txt_go_to_add_team">Go to \'Add Team \' tab</string>
+    <string name="txt_top_players">Top Players</string>
+    <string name="txt_most_run">Most Runs</string>
+    <string name="txt_most_wickets">Most Wickets</string>
+    <string name="txt_player_name">Player Name</string>
+    <string name="txt_create_player">Create a Player</string>
+    <string name="txt_no_match">No Matches</string>
+    <string name="txt_start_match_description">Start match or create fixture in this tournament</string>
+
+    <string name="txt_match_played">Matches Played</string>
+    <string name="txt_match_won">Matches Won</string>
+
+    <string name="txt_no_players">No Players</string>
+    <string name="txt_new_player_description">You can create new Playes by clicking below button</string>
+    <string name="txt_create_players">Create Player</string>
+    <string name="txt_highest_score">Highest Score</string>
+    <string name="txt_best_bowl">Best Bowl</string>
+    <string name="txt_most_sixes">Most Sixes</string>
+    <string name="txt_most_fours">Most Fours</string>
+    <string name="txt_stumpings">Stumpings</string>
+    <string name="txt_catches">Catches</string>
+    <string name="txt_venue">Venue</string>
+    <string name="txt_over">Overs</string>
+    <string name="txt_wickets">Wickets</string>
+    <string name="txt_won_toss">Who won the toss</string>
+    <string name="txt_decided_to">Decided to?</string>
+    <string name="txt_save">Save</string>
+    <string name="txt_score">Start Score</string>
+    <!-- Keys -->
+    <string name="key_tid">tID</string>
+
+    <string name="txt_team_name">Team Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

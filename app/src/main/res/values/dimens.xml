@@ -1,0 +1,28 @@
+<resources>
+    <!-- Home Screen Margins -->
+    <dimen name="text_size">18dp</dimen>
+    <dimen name="text_temperature_size">18dp</dimen>
+    <dimen name="marigin_10dp">10dp</dimen>
+    <dimen name="marigin_20dp">20dp</dimen>
+    <dimen name="text_16dp">16dp</dimen>
+    <dimen name="marigin_5dp">5dp</dimen>
+    <dimen name="text_size_25dp">25dp</dimen>
+    <dimen name="marigin_30dp">30dp</dimen>
+    <dimen name="marigin_40dp">40dp</dimen>
+    <dimen name="marigin_50dp">50dp</dimen>
+    <dimen name="marigin_8dp">8dp</dimen>
+    <dimen name="marigin_32dp">32dp</dimen>
+    <dimen name="marigin_33dp">33dp</dimen>
+
+    <dimen name="horizontal_150">150dp</dimen>
+    <dimen name="vertical_150">150dp</dimen>
+    <dimen name="horizontal_200">200dp</dimen>
+    <dimen name="vertical_200">200dp</dimen>
+    <dimen name="vertical_100">100dp</dimen>
+    <dimen name="horizontal_25dp">25dp</dimen>
+    <dimen name="horizontal_20dp">20dp</dimen>
+    <dimen name="horizontal_10dp">10dp</dimen>
+    <dimen name="horizontal_5dp">5dp</dimen>
+    <dimen name="horizontal_30dp">30dp</dimen>
+
+</resources>
