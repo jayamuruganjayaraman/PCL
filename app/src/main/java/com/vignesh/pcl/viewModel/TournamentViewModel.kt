@@ -14,7 +14,7 @@ class TournamentViewModel (private val application: Application): ViewModel() {
        // allTournaments = repository.allTournaments
     }
 
-    suspend fun insertTournament(tournament: TournamentEntity) {
-        repository.insert(tournament)
+    fun insertTournament(tournament: TournamentEntity):Long {
+        return repository.insert(tournament)
     }
 }

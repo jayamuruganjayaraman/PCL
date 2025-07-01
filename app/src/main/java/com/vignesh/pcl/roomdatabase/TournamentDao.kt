@@ -10,7 +10,7 @@ import com.vignesh.pcl.model.TournamentEntity
 @Dao
 interface TournamentDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTournament(tournament: TournamentEntity)
+     fun insert(tournament: TournamentEntity):Long
 
     @Query("SELECT * FROM tournaments ORDER BY startDate")
     fun getAllTournaments(): LiveData<List<TournamentEntity>>

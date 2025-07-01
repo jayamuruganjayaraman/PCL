@@ -13,7 +13,7 @@ class TournamentRepository(private val mContext: Context) {
         tournamentDao = db.tournamentDao()
     }
 
-    suspend fun insert(tournament: TournamentEntity) {
-        tournamentDao.insertTournament(tournament)
+     fun insert(tournament: TournamentEntity):Long {
+        return tournamentDao.insert(tournament)
     }
 }
