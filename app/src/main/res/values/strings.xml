@@ -20,7 +20,7 @@
     <string name="txt_location">Location</string>
     <string name="txt_start_date">Start Date</string>
     <string name="txt_end_date">End Date</string>
-    <string name="txt_add_new">Add Ne</string>
+    <string name="txt_add_new">Add New Tournament</string>
 
     <!-- Home Page Text -->
     <string name="txt_no_tournament">No Tournament</string>
@@ -62,6 +62,7 @@
     <string name="key_tid">tID</string>
 
     <string name="txt_team_name">Team Name</string>
+    <string name="close">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
