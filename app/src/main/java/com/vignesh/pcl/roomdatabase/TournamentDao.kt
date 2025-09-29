@@ -12,6 +12,6 @@ interface TournamentDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
      fun insert(tournament: TournamentEntity):Long
 
-    @Query("SELECT * FROM tournaments ORDER BY startDate")
+    @Query("SELECT * FROM tournaments ORDER BY startDate DESC")
     fun getAllTournaments(): LiveData<List<TournamentEntity>>
 }

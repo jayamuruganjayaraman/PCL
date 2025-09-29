@@ -23,8 +23,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/white"
-                app:contentInsetLeft="0dp"
-                app:contentInsetStart="0dp"
+                app:contentInsetLeft="5dp"
+                app:contentInsetStart="5dp"
+                app:titleMargin="@dimen/horizontal_20dp"
                 app:contentInsetStartWithNavigation="0dp"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
                 app:titleTextColor="@color/black" />

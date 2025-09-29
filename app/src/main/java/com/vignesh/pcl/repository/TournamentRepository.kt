@@ -1,19 +1,16 @@
 package com.vignesh.pcl.repository
 
 import android.content.Context
+import androidx.lifecycle.LiveData
 import com.vignesh.pcl.model.TournamentEntity
 import com.vignesh.pcl.roomdatabase.LocalDatabase
 import com.vignesh.pcl.roomdatabase.TournamentDao
 
-class TournamentRepository(private val mContext: Context) {
-    private val tournamentDao: TournamentDao
+class TournamentRepository(private val tournamentDao: TournamentDao) {
 
-    init {
-        val db: LocalDatabase = LocalDatabase.getDatabase(mContext)
-        tournamentDao = db.tournamentDao()
-    }
-
-     fun insert(tournament: TournamentEntity):Long {
+    suspend fun insert(tournament: TournamentEntity):Long {
         return tournamentDao.insert(tournament)
     }
+
+    val allTournaments: LiveData<List<TournamentEntity>> = tournamentDao.getAllTournaments()
 }
