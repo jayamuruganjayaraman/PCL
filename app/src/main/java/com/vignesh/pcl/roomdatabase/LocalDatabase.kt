@@ -27,6 +27,9 @@ import com.vignesh.pcl.model.TournamentEntity
 abstract class LocalDatabase : RoomDatabase() {
 
     abstract fun tournamentDao(): TournamentDao
+    abstract fun teamDao(): TeamDao
+    abstract fun matchDao(): MatchDao
+    abstract fun playerDao(): PlayerDao
     companion object {
         val DB_NAME: String = "pcl.db"
         @Volatile

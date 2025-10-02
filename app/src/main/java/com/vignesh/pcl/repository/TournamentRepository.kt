@@ -13,4 +13,8 @@ class TournamentRepository(private val tournamentDao: TournamentDao) {
     }
 
     val allTournaments: LiveData<List<TournamentEntity>> = tournamentDao.getAllTournaments()
+
+    fun getTournamentById(id: Long): LiveData<TournamentEntity?> {
+        return tournamentDao.getTournamentById(id)
+    }
 }

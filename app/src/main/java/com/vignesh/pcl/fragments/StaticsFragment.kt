@@ -6,20 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.vignesh.pcl.R
+import com.vignesh.pcl.databinding.FragmentStaticsBinding
 
 class StaticsFragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    lateinit var binding: FragmentStaticsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_statics, container, false)
+        binding = FragmentStaticsBinding.inflate(inflater, container, false)
+
+        return binding.root
     }
 
     companion object {

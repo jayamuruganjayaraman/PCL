@@ -14,4 +14,7 @@ interface TournamentDao {
 
     @Query("SELECT * FROM tournaments ORDER BY startDate DESC")
     fun getAllTournaments(): LiveData<List<TournamentEntity>>
+
+    @Query("SELECT * FROM tournaments WHERE tournamentId = :id LIMIT 1")
+    fun getTournamentById(id: Long): LiveData<TournamentEntity?>
 }

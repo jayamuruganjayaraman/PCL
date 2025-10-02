@@ -27,4 +27,7 @@ class TournamentViewModel (private val application: Application): ViewModel() {
         }
         return result
     }
+    fun getTournamentById(id: Long): LiveData<TournamentEntity?> {
+        return repository.getTournamentById(id)
+    }
 }

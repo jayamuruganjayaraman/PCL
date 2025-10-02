@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vignesh.pcl.R
 import com.vignesh.pcl.adapter.HomeTabAdapter
@@ -13,11 +15,17 @@ import com.vignesh.pcl.databinding.FragmentHomeContainerBinding
 class HomeContainerFragment : Fragment() {
     lateinit var binding: FragmentHomeContainerBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val fab = requireActivity().findViewById<ExtendedFloatingActionButton>(R.id.fab_add_new)
+        fab?.hide()
+        super.onViewCreated(view, savedInstanceState)
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val fab = requireActivity().findViewById<ExtendedFloatingActionButton>(R.id.fab_add_new)
+        fab?.show()
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +42,8 @@ class HomeContainerFragment : Fragment() {
         val tournamentId = arguments?.getLong("tournamentId")
         val position = 0
 
-        val adapter = HomeTabAdapter(requireActivity(), position)
+        val adapter = tournamentId?.let { HomeTabAdapter(requireActivity(), it) }
+       adapter?.createFragment(position)
         binding.viewPager.adapter = adapter
         TabLayoutMediator(binding.tabHome, binding.viewPager) { tab, pos ->
             tab.text = tabTitles[pos]
