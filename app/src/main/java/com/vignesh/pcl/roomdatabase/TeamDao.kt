@@ -15,6 +15,9 @@ interface TeamDao {
     @Query("SELECT * FROM TeamEntity WHERE tournamentId = :tournamentId")
     fun getTeamsByTournamentId(tournamentId: Long): LiveData<List<TeamEntity>>
 
+    @Query("SELECT * FROM TeamEntity WHERE tournamentId = :tournamentId")
+    fun getTeamsList(tournamentId: Long): List<TeamEntity>
+
     @Query("SELECT * FROM TeamEntity WHERE teamId = :teamId LIMIT 1")
     fun getTeamById(teamId: Long): LiveData<TeamEntity>
 }

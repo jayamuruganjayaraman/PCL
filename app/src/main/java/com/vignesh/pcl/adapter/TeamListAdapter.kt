@@ -11,10 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.vignesh.pcl.R
 import com.vignesh.pcl.model.TeamEntity
 
-
-class TeamAdapter(
-    private val onItemClick: (TeamEntity) -> Unit
-) : ListAdapter<TeamEntity, TeamAdapter.TeamViewHolder>(DiffCallback) {
+class TeamListAdapter( private val onItemClick: (TeamEntity) -> Unit
+) : ListAdapter<TeamEntity, TeamListAdapter.TeamViewHolder>(DiffCallback) {
 
     object DiffCallback : DiffUtil.ItemCallback<TeamEntity>() {
         override fun areItemsTheSame(oldItem: TeamEntity, newItem: TeamEntity): Boolean {
@@ -29,7 +27,7 @@ class TeamAdapter(
     inner class TeamViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvTeamName: TextView = itemView.findViewById(R.id.txtTeamName)
         private val imgTeamName: ImageView = itemView.findViewById(R.id.img_team)
-        fun bind(item: TeamEntity,position: Int) {
+        fun bind(item: TeamEntity, position: Int) {
             tvTeamName.text = item.name
             if(position % 2 == 0){
                 imgTeamName.setImageResource(R.drawable.team_1)
@@ -44,7 +42,7 @@ class TeamAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_team, parent, false)
+            .inflate(R.layout.team_list_item, parent, false)
         return TeamViewHolder(view)
     }
 

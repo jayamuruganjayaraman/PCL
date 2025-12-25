@@ -17,4 +17,9 @@ class TeamRepository (private val teamDao: TeamDao) {
     fun getTeamById(teamId: Long): LiveData<TeamEntity> {
         return teamDao.getTeamById(teamId)
     }
+
+     fun getTeamsList(tournamentId: Long):List<TeamEntity>{
+        return teamDao.getTeamsList(tournamentId)
+
+    }
 }

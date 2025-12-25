@@ -7,6 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.vignesh.pcl.model.TeamEntity
 import com.vignesh.pcl.repository.TeamRepository
 import com.vignesh.pcl.roomdatabase.LocalDatabase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class TeamViewModel (private val application: Application): ViewModel() {
@@ -28,5 +30,12 @@ class TeamViewModel (private val application: Application): ViewModel() {
 
     fun getTeamById(teamId: Long): LiveData<TeamEntity> {
         return repository.getTeamById(teamId)
+    }
+    fun getTeamsList(tournamentId: Long):List<TeamEntity>{
+        var list = emptyList<TeamEntity>()
+        viewModelScope.async {
+            list =  repository.getTeamsList(tournamentId)
+        }
+      return list
     }
 }

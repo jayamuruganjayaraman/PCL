@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -37,16 +41,6 @@
             android:textColor="@color/black"
             android:layout_marginTop="@dimen/marigin_10dp"
             android:layout_marginStart="10dp"/>
-
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="start"
-            android:textSize="14sp"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/tv_tournament_date"
@@ -84,16 +78,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -113,10 +104,8 @@
                     android:id="@+id/team_grid_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/marigin_10dp"
-                    android:orientation="horizontal"
-                    android:paddingStart="10dp"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal" />
 
                 <LinearLayout
                     android:id="@+id/llNoTeams"
@@ -153,9 +142,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="1"
                 android:layout_marginTop="5dp">
                 <TextView
                     android:layout_width="match_parent"
@@ -249,5 +237,5 @@
 
 
     </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>
